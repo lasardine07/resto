@@ -1,0 +1,79 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+header {
+  background: #d94f2b;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a.active, nav a:hover {
+  text-decoration: underline;
+}
+main {
+  padding: 2rem;
+  max-width: 700px;
+  margin: auto;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 5px;
+}
+h1, h2 {
+  color: #b03014;
+}
+ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #d94f2b;
+  color: white;
+  margin-top: 2rem;
+}
+form input, form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+form button {
+  background: #b03014;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 3px;
+}
+form button:hover {
+  background: #871f0d;
+}
+img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+.images {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.images img {
+  width: 48%;
+  max-width: 300px;
+}

@@ -38,6 +38,7 @@ header {
   z-index: 1000;
   padding: 1rem 2rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 10px rgba(0,0,0,0.6);
@@ -47,18 +48,24 @@ header {
   font-size: 1.8rem;
   font-weight: 700;
   color: #ffb347;
+  flex: 1 1 100%;
+  text-align: center;
+  margin-bottom: 0.5rem;
 }
 
 /* --- NAVIGATION --- */
 nav {
   display: flex;
-  align-items: center;
-  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 1rem;
 }
 
 nav a {
   font-weight: 600;
   position: relative;
+  padding: 0.3rem 0.5rem;
 }
 
 nav a::after {
@@ -77,20 +84,9 @@ nav a.active::after {
   width: 100%;
 }
 
-/* --- MENU BURGER (mobile) --- */
+/* Supprimer le menu burger */
 .menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.menu-toggle span {
-  width: 25px;
-  height: 3px;
-  background: #ffb347;
-  margin: 4px 0;
-  border-radius: 2px;
-  transition: all 0.3s ease;
+  display: none !important;
 }
 
 /* ------------------- */
@@ -251,32 +247,24 @@ header, footer, .btn, .menu-list li {
 /*     RESPONSIVE      */
 /* ------------------- */
 @media (max-width: 850px) {
-  nav {
-    position: fixed;
-    top: 70px;
-    right: -100%;
-    background: #1f1f1f;
+  header {
     flex-direction: column;
-    width: 220px;
-    padding: 2rem;
-    border-left: 3px solid #ffb347;
-    transition: right 0.4s ease;
-    height: 100vh;
+    padding: 1rem;
   }
 
-  nav.open {
-    right: 0;
+  .logo {
+    margin-bottom: 0.8rem;
   }
 
-  .menu-toggle {
-    display: flex;
+  nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
   }
-}
 
-/* Ajustement des textes sur mobile */
-@media (max-width: 600px) {
-  .hero h2 {
-    font-size: 1.4rem;
+  nav a {
+    font-size: 0.95rem;
   }
 
   main {
@@ -285,7 +273,18 @@ header, footer, .btn, .menu-list li {
   }
 
   .btn {
-    padding: 0.7rem 1.4rem;
     font-size: 0.95rem;
+    padding: 0.7rem 1.4rem;
+  }
+}
+
+@media (max-width: 500px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    display: block;
+    padding: 0.4rem;
   }
 }
